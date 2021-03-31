@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>ROT13</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body id = 'body'>
+		
+		<script type="text/javascript">
+			function encrypt() {
+				var xhr = new XMLHttpRequest();
+				var text = document.getElementById("theInput").value;
+
+				xhr.open("GET", "http://localhost:3000/encryption?theText=" + text, true);
+				xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+				xhr.onreadystatechange = function() {
+					if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+						var ele = document.getElementById("resultOfEncryption");
+						ele.innerHTML = this.responseText;
+					}
+				}
+
+				xhr.send();
+			}
+		</script>
+
+		<h1>ROT - 13</h1>
+		<textarea id = "theInput" rows = "10" cols = "30" accept-charset = "UTF-8"></textarea>
+		<br><br>
+		<button type = "button" id = "encrypt" onClick = 'encrypt()'>Click Here to Encrypt</button>
+		<p id = "resultOfEncryption"></p>
+	</body>
+</html>

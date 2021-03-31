@@ -1,0 +1,42 @@
+body {
+	margin: 0px;
+	font-size: 1.1em;
+}
+
+h1 {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 2%;
+}
+
+#theInput {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	margin-top: 3%;
+	font-size: 30px;
+	height: 200px;
+	padding: 10px;
+}
+
+#encrypt {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	height: 50px;
+	margin-top: 2%;
+}
+
+#resultOfEncryption {
+	border: 1px solid black;
+	width: 50%;
+	margin-left: 25%;
+	height: 300px;
+	margin-top: 6%;
+	text-align: center;
+	font-size: 35px;
+	padding: 10px;
+}
